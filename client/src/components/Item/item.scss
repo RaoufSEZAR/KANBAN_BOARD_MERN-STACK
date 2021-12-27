@@ -1,0 +1,50 @@
+.item {
+	margin-bottom: 15px;
+	color: #ffffff;
+	width: 250px;
+	height: 170px;
+	&:hover {
+		border-radius: 15px;
+		box-shadow: 0px 0px 49px 5px #bea6a6;
+	}
+
+	.container {
+		margin: 5px;
+		width: 100%;
+		height: 100%;
+		background-color: inherit;
+		display: flex;
+		border-radius: 15px;
+
+		flex-direction: column;
+
+		> * {
+			padding: 5px;
+		}
+
+		.settings {
+			display: flex;
+			margin-top: 50px;
+			align-items: center;
+			justify-content: space-evenly;
+
+			.time {
+				margin-right: 10px;
+			}
+			.deleteIcon {
+				cursor: pointer;
+				width: 70px;
+				color: #ffffff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 10px;
+				padding: 10px;
+				background-color: rgb(233, 40, 40);
+				&:hover {
+					background-color: darken($color: red, $amount: 13);
+				}
+			}
+		}
+	}
+}

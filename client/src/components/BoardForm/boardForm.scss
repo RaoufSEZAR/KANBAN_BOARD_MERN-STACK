@@ -1,0 +1,62 @@
+@import "../../mediaQuery.scss";
+
+.form {
+	display: flex;
+	padding: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	@include mobile {
+		display: flex;
+		flex-direction: column;
+		padding: 0px;
+	}
+	.row {
+		margin-right: 20px;
+
+		@include mobile {
+			margin: 0px;
+			display: flex;
+			justify-content: center;
+		}
+
+		input {
+			height: 50px;
+			width: 400px;
+			border-radius: 15px;
+			padding-left: 10px;
+			font-size: 18px;
+			outline: none;
+
+			@include mobile {
+				width: 90%;
+				margin-bottom: 8px;
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+	.submit {
+		@include mobile {
+			display: flex;
+			justify-content: center;
+		}
+		.submitBtn {
+			cursor: pointer;
+			width: 100px;
+			padding: 10px;
+			border-radius: 15px;
+			height: 55px;
+			border: none;
+			color: #ffffff;
+			background-color: teal;
+			&:hover {
+				background-color: darken($color: teal, $amount: 3);
+			}
+
+			@include mobile {
+				margin-top: 2px;
+			}
+		}
+	}
+}
