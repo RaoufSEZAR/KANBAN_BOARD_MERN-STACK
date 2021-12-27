@@ -1,5 +1,5 @@
 # KANBAN_BOARD_MERN-STACK
-this project is for the kanban board project, the user can add a board, and inside it can add tasks to the lists like backlog, in Progress, todo and done, and can delete task card or can delete all the board with all its tasks.I coded this project using ***HTML5, SCSS, React, Node.js, Express.js ,Javascript, MongoDb and Mongoose.***
+this project is for the kanban board project, the user can add a board, and inside it can add tasks to the lists like backlog, in Progress, todo and done, and can delete task card or can delete all the board with all its tasks with drop drap feature to change cards between the lists.I coded this project using ***HTML5, SCSS, React, Node.js, Express.js ,Javascript, MongoDb and Mongoose.***
 
 ## Board Model:
 - Add a board
