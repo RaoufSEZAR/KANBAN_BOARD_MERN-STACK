@@ -10,6 +10,8 @@ this project is for the kanban board project, the user can add a board, and insi
 - Add a task
 - Delete tasks by the task slug (task name)
 
+### You can find Postman Collection in this [link](https://github.com/RaoufSEZAR/KANBAN_BOARD_MERN-STACK/blob/main/RastTaskProject.postman_collection.json) 
+
 ## To try this project in your machine 
 
 after cloning the project and to add DB add .env file to api file and write this:
@@ -27,8 +29,7 @@ after that open client file and in the same path write this in the terminal:
 ```
 npm install
 npm start
-``` 
-
+```  
 
 ### then the default Browser will open in port 3000 like: ****http://localhost:3000/**** and the project will be ready to use as this screens:
 
