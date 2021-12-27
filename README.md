@@ -1,6 +1,15 @@
 # KANBAN_BOARD_MERN-STACK
 this project is for the kanban board project, the user can add a board, and inside it can add tasks to the lists like backlog, in Progress, todo and done, and can delete task card or can delete all the board with all its tasks.I coded this project using ***HTML5, SCSS, React, Node.js, Express.js ,Javascript, MongoDb and Mongoose.***
 
+## Board Model:
+- Add a board
+- Find all cards by a board slug(board name)
+- Delete a board with every task has the same boardId      
+
+## Task Model:
+- Add a task
+- Delete tasks by the task slug (task name)
+
 ## To try this project in your machine 
 
 after cloning the project and to add DB add .env file to api file and write this:
@@ -19,14 +28,7 @@ after that open client file and in the same path write this in the terminal:
 npm install
 npm start
 ``` 
-## Board Model:
-- Add a board
-- Find all cards by a board slug(board name)
-- Delete a board with every task has the same boardId      
 
-## Task Model:
-- Add a task
-- Delete tasks by the task slug (task name)
 
 ### then the default Browser will open in port 3000 like: ****http://localhost:3000/**** and the project will be ready to use as this screens:
 
