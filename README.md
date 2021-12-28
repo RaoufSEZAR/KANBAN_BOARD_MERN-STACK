@@ -47,4 +47,5 @@ ncapture-localhost-3000-cro-2021-12-27-19_42_06](https://user-images.githubuserc
 ![screencapture-localhost-3000-seo-team-2021-12-27-19_36_58](https://user-images.githubusercontent.com/64332249/147492413-4cf2cd56-328c-4387-9e4e-e333a569f2ab.png)
 ![screencapture-localhost-3000-front-2021-12-28-18_08_09](https://user-images.githubusercontent.com/64332249/147580341-13762327-68f4-4f99-b545-fbb1580ab282.png)
 ![Ekran Alıntısı](https://user-images.githubusercontent.com/64332249/147580345-753937be-9150-44a3-86f5-1b239704f33d.PNG)
+![screencapture-localhost-3000-sdm-2021-12-28-19_37_33](https://user-images.githubusercontent.com/64332249/147587669-7cdb32ca-ca66-4957-aa9f-d7c601081499.png)
 
