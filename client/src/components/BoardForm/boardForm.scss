@@ -13,6 +13,8 @@
 	}
 	.row {
 		margin-right: 20px;
+		display: flex;
+		flex-direction: column;
 
 		@include mobile {
 			margin: 0px;
@@ -23,6 +25,7 @@
 		input {
 			height: 50px;
 			width: 400px;
+			margin-bottom: 15px;
 			border-radius: 15px;
 			padding-left: 10px;
 			font-size: 18px;
@@ -59,4 +62,7 @@
 			}
 		}
 	}
+}
+
+.error {
 }
