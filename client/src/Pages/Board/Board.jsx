@@ -25,18 +25,21 @@ export default function Board() {
 	}, []);
 
 	const onDragEnd = (result, cols, setCols) => {
-		if (!result.destination) return;
+		// avoid drap the div outside the div parent
 
 		const { source, destination } = result;
+		if (!destination) return;
 
+		// to enable index left his place and drag drap it in the another column
 		if (source.droppableId !== destination.droppableId) {
+			// list name [todo,inPorgress.....]
 			const sourceCol = cols[source.droppableId];
 			const destCol = cols[destination.droppableId];
+			// the items which have same list name
 			const sourceItems = [...sourceCol.items];
 			const destItems = [...destCol.items];
 			const [removed] = sourceItems.splice(source.index, 1);
 			destItems.splice(destination.index, 0, removed);
-
 			setCols({
 				...cols,
 				[source.droppableId]: {
@@ -48,7 +51,9 @@ export default function Board() {
 					items: destItems,
 				},
 			});
-		} else {
+		}
+		// to enable index left his place and drag drap it in the same column
+		else {
 			const columns = cols[source.droppableId];
 			const _items = [...columns.items];
 			const [removed] = _items.splice(source.index, 1);

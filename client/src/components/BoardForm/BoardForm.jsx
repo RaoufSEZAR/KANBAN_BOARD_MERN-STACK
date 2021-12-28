@@ -19,7 +19,7 @@ export default function BoardForm() {
 		if (val.length <= 0) {
 			valids.isValid = false;
 			valids.errMsg = "Board name is Required";
-		} else if (val.split(" ").length < 2) {
+		} else if (val.split("").length < 2) {
 			valids.isValid = false;
 			valids.errMsg = "Board name must be more than 2 words";
 		} else {

@@ -7,14 +7,13 @@ import Item from "../Item/Item";
 export default function Col({ col, index, _id }) {
 	return (
 		<div className="col" key={index}>
-			<h5>{col.name}</h5>
+			<h2>{col.name}</h2>
 			<div>
 				<Droppable droppableId={_id} key={_id}>
 					{(provider, snapshot) => {
 						return (
 							<div
 								className="drop"
-								{...provider.droppableProps}
 								style={{
 									// to change color during drag
 									backgroundColor: snapshot.isDraggingOver

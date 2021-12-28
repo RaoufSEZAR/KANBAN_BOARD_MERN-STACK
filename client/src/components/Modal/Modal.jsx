@@ -52,9 +52,9 @@ export function Modall({ slug }) {
 		if (val.length <= 0) {
 			valids.isValid = false;
 			valids.errMsg = "Card title is Required";
-		} else if (val.split(" ").length < 2) {
+		} else if (val.split("").length < 2) {
 			valids.isValid = false;
-			valids.errMsg = "Card title must be more than 3 words";
+			valids.errMsg = "Card title must be more than 2 words";
 		} else {
 			valids.isValid = true;
 			valids.errMsg = "";
@@ -71,7 +71,7 @@ export function Modall({ slug }) {
 		if (val.length <= 0) {
 			valids.isValid = false;
 			valids.errMsg = "Card body is Required";
-		} else if (val.split(" ").length < 6) {
+		} else if (val.split("").length < 6) {
 			valids.isValid = false;
 			valids.errMsg = "Card body must be more than 6 words";
 		} else {
