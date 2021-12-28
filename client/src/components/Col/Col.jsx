@@ -24,50 +24,8 @@ export default function Col({ col, index, _id }) {
 								ref={provider.innerRef}
 							>
 								{col.items.map((item, index) => {
-									// to give different color during fetch data
-									if (item.status === "Todo") {
-										return (
-											<Item
-												item={item}
-												index={index}
-												key={index}
-												color="#443c8f"
-											/>
-										);
-									}
-									// to give different color during fetch data
-									if (item.status === "Backlog") {
-										return (
-											<Item
-												item={item}
-												index={index}
-												key={index}
-												color="#96391d"
-											/>
-										);
-									}
-									// to give different color during fetch data
-									if (item.status === "Done") {
-										return (
-											<Item
-												item={item}
-												index={index}
-												key={index}
-												color="#9627a1"
-											/>
-										);
-									}
-									// to give different color during fetch data
-									if (item.status === "InProgress") {
-										return (
-											<Item
-												item={item}
-												index={index}
-												key={index}
-												color="#6b9648"
-											/>
-										);
-									}
+									// to send single item card
+									return <Item item={item} index={index} key={index} />;
 								})}
 
 								{provider.placeholder}

@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import Modal from "react-modal";
 import axios from "axios";
-
 // give style to modal
 const customStyles = {
 	content: {
@@ -25,6 +24,7 @@ export function Modall({ slug }) {
 	const body = useRef();
 	const status = useRef();
 	const boardId = useRef();
+	const color = useRef();
 
 	// to open/close modal
 	const [modalIsOpen, setIsOpen] = useState(false);
@@ -36,10 +36,10 @@ export function Modall({ slug }) {
 			title: title.current.value,
 			body: body.current.value,
 			status: status.current.value,
+			color: color.current.value,
 			boardId: boardId.current.value.toString(),
 		};
 		try {
-			console.log(boardId.current.value);
 			await axios.post("/tasks", newPost);
 			window.location.reload();
 		} catch (err) {
@@ -64,7 +64,6 @@ export function Modall({ slug }) {
 					ariaHideApp={false}
 					contentLabel="modal"
 					style={customStyles}
-					// className="custom"
 				>
 					<h2>Kanban</h2>
 					<form className="formBottom" onSubmit={submitHandler}>
@@ -93,6 +92,16 @@ export function Modall({ slug }) {
 								}}
 							/>
 							<input
+								type="color"
+								ref={color}
+								style={{
+									margin: "10px",
+
+									// padding: "15px",
+								}}
+							/>
+
+							<input
 								className="shareInput"
 								value={slug}
 								ref={boardId}
@@ -106,6 +115,7 @@ export function Modall({ slug }) {
 									margin: "10px",
 									padding: "15px",
 									fontSize: "15px",
+									// width: "80%",
 								}}
 							>
 								<option value="Backlog">Backlog</option>

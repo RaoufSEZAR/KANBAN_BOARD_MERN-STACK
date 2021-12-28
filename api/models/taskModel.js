@@ -24,6 +24,10 @@ const TaskSchema = new Schema(
 			required: true,
 			ref: "Board",
 		},
+		color: {
+			type: String,
+			default: "#fffff",
+		},
 	},
 	{
 		timestamps: true,

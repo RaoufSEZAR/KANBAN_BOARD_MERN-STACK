@@ -20,7 +20,6 @@ const BoardSchema = new Schema(
 // to make Slug field that has the same value with board name
 BoardSchema.pre("validate", function (next) {
 	this.slug = slugify(this.name, { lower: true, strict: true });
-
 	next();
 });
 

@@ -4,7 +4,7 @@ import { Draggable } from "react-beautiful-dnd";
 
 import axios from "axios";
 
-export default function Item({ item, index, color }) {
+export default function Item({ item, index }) {
 	const deleteTask = async (slug) => {
 		try {
 			await axios.delete(`/tasks/${slug}`);
@@ -29,7 +29,10 @@ export default function Item({ item, index, color }) {
 							...provider.draggableProps.style,
 						}}
 					>
-						<div className="container" style={{ backgroundColor: `${color}` }}>
+						<div
+							className="container"
+							style={{ backgroundColor: `${item.color}` }}
+						>
 							<div className="title">{item.title}</div>
 							<div className="body">{item.body}</div>
 							<div className="settings">
