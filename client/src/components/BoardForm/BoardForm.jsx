@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function BoardForm() {
 	const name = useRef();
+	// TITLE VALIDATION HOOKS
 	const [titleValid, setTitleValid] = useState({
 		touched: false,
 		isValid: false,

@@ -29,11 +29,15 @@ export function Modall({ slug }) {
 
 	// to open/close modal
 	const [modalIsOpen, setIsOpen] = useState(false);
+
+	// TITLE VALIDATION HOOKS
 	const [titleValid, setTitleValid] = useState({
 		touched: false,
 		isValid: false,
 		errMsg: "",
 	});
+
+	// BODY VALIDATION HOOKS
 	const [bodyValid, setBodyValid] = useState({
 		touched: false,
 		isValid: false,
@@ -167,8 +171,6 @@ export function Modall({ slug }) {
 								ref={color}
 								style={{
 									margin: "10px",
-
-									// padding: "15px",
 								}}
 							/>
 

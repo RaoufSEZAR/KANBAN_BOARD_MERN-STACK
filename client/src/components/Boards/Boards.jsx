@@ -7,6 +7,7 @@ import NoCard from "./../NoCard/NoCard";
 export default function Boards() {
 	const [boards, setBoards] = useState([]);
 
+	// TO DELETE BOARD WITH ITS TASKS USING BOARD SLUG
 	const deleteBoard = async (slug) => {
 		try {
 			await axios.delete(`/boards/${slug}`);
@@ -16,14 +17,15 @@ export default function Boards() {
 		}
 	};
 
+	// TO FETCH BOARDS DATA FROM DB USING AXIOS API
 	const fetchTasks = async () => {
 		const boards = await axios.get("/boards");
-
 		setBoards(boards.data.boards);
 	};
 	useEffect(() => {
 		fetchTasks();
 	}, []);
+
 	return (
 		<div className="boards">
 			{boards ? (
