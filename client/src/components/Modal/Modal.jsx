@@ -115,7 +115,7 @@ export function Modall({ slug }) {
 									margin: "10px",
 									padding: "15px",
 									fontSize: "15px",
-									// width: "80%",
+									width: "85%",
 								}}
 							>
 								<option value="Backlog">Backlog</option>
