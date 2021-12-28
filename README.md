@@ -45,4 +45,6 @@ npm start
 ncapture-localhost-3000-cro-2021-12-27-19_42_06](https://user-images.githubusercontent.com/64332249/147492403-ae073dc8-12c1-4ab3-b53e-f1424f0c73e0.png)
 ![screencapture-localhost-3000-seo-team-2021-12-27-19_37_18](https://user-images.githubusercontent.com/64332249/147492408-36d6617b-cb45-4509-a51d-92c9101a1f71.png)
 ![screencapture-localhost-3000-seo-team-2021-12-27-19_36_58](https://user-images.githubusercontent.com/64332249/147492413-4cf2cd56-328c-4387-9e4e-e333a569f2ab.png)
+![screencapture-localhost-3000-front-2021-12-28-18_08_09](https://user-images.githubusercontent.com/64332249/147580341-13762327-68f4-4f99-b545-fbb1580ab282.png)
+![Ekran Alıntısı](https://user-images.githubusercontent.com/64332249/147580345-753937be-9150-44a3-86f5-1b239704f33d.PNG)
 
