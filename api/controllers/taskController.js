@@ -72,7 +72,7 @@ exports.createTask = async (req, res, next) => {
 exports.updateTask = async (req, res, next) => {
 	const slug = req.params.slug;
 	try {
-		const task = await Task.findOneAndUpdate({ slug }, req.body, {
+		const task = await Task.findOneAndUpdate({ slug }, req.body.status, {
 			new: true,
 			runValidators: true,
 		});
