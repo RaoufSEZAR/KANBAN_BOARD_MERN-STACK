@@ -6,6 +6,7 @@ require("dotenv").config();
 // routes
 const taskRoutes = require("./routes/taskRoutes");
 const boardRoutes = require("./routes/boardRoutes");
+
 const app = express();
 
 //connect DB
@@ -20,8 +21,9 @@ mongoose
 	.catch((err) => {
 		console.log(err);
 	});
-
+// to avoid CORS errors after sending data to frontend
 app.use(cors());
+// to make data readable as json data
 app.use(express.json());
 
 // Routes
