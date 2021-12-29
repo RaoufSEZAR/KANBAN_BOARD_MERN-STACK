@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React from "react";
 import "./col.scss";
 import { Droppable } from "react-beautiful-dnd";
@@ -14,7 +13,6 @@ export default function Col({ col, index, _id }) {
 						return (
 							<div
 								className="drop"
-								// {...provider.droppableProps}
 								style={{
 									// to change color during drag
 									backgroundColor: snapshot.isDraggingOver

@@ -60,10 +60,9 @@ export function Modall({ slug }) {
 			valids.errMsg = "";
 		}
 		setTitleValid({ ...valids });
-		console.log(valids);
 	};
 
-	// title input validation
+	// body input validation
 	const checkBodyValidation = (event) => {
 		const val = event.target.value.trim();
 		let valids = { ...bodyValid };
@@ -79,12 +78,11 @@ export function Modall({ slug }) {
 			valids.errMsg = "";
 		}
 		setBodyValid({ ...valids });
-		console.log(valids);
 	};
 	// create task
 	const submitHandler = async (e) => {
 		e.preventDefault();
-		const newPost = {
+		const newTask = {
 			title: title.current.value,
 			body: body.current.value,
 			status: status.current.value,
@@ -92,7 +90,7 @@ export function Modall({ slug }) {
 			boardId: boardId.current.value.toString(),
 		};
 		try {
-			await axios.post("/tasks", newPost);
+			await axios.post("/tasks", newTask);
 			window.location.reload();
 		} catch (err) {
 			console.log("err", err);

@@ -31,7 +31,6 @@ export default function Board() {
 
 	const onDragEnd = (result, cols, setCols) => {
 		// avoid drap the div outside the div parent
-
 		const { source, destination } = result;
 		if (!destination) return;
 
@@ -77,7 +76,7 @@ export default function Board() {
 	return (
 		<div className="board">
 			<div className="header">
-				<Header title="Kanban Board" />
+				<Header title={`${slug} Board `} />
 				<div className="modal">
 					<Modall slug={boardId} />
 				</div>
