@@ -40,7 +40,7 @@ export default function Boards() {
 				})
 			) : (
 				// if no cards will show
-				<NoCard />
+				<NoCard title="there are no Boards yet" />
 			)}
 		</div>
 	);

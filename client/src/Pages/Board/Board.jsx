@@ -7,6 +7,7 @@ import Col from "./../../components/Col/Col";
 import Header from "./../../components/Header/Header";
 import { Modall } from "./../../components/Modal/Modal";
 import { useParams } from "react-router";
+import NoCard from "./../../components/NoCard/NoCard";
 
 export default function Board() {
 	const [cols, setCols] = useState({});
@@ -16,9 +17,13 @@ export default function Board() {
 
 	// get tasks from api
 	const fetchTasks = async () => {
-		const tasks = await axios.get(`/tasks/${slug}`);
-		setCols(tasks.data.data);
-		setBoardId(tasks.data.boardId);
+		try {
+			const tasks = await axios.get(`/tasks/${slug}`);
+			setCols(tasks.data.data);
+			setBoardId(tasks.data.boardId);
+		} catch (error) {
+			console.log(error);
+		}
 	};
 	useEffect(() => {
 		fetchTasks();
@@ -68,6 +73,7 @@ export default function Board() {
 			});
 		}
 	};
+
 	return (
 		<div className="board">
 			<div className="header">
@@ -82,10 +88,14 @@ export default function Board() {
 						onDragEnd(result, cols, setCols);
 					}}
 				>
-					{Object.entries(cols).map(([_id, col], index) => {
-						// send every object as a col in api [todo, done, backlog, inProgress] to col components
-						return <Col key={_id} col={col} index={index} _id={_id} />;
-					})}
+					{Object.entries(cols).length > 0 ? (
+						Object.entries(cols).map(([_id, col], index) => {
+							// send every object as a col in api [todo, done, backlog, inProgress] to col components
+							return <Col key={_id} col={col} index={index} _id={_id} />;
+						})
+					) : (
+						<NoCard title="Obsss No Board with this name " />
+					)}
 				</DragDropContext>
 			</div>
 		</div>
