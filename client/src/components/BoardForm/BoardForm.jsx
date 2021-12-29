@@ -27,7 +27,6 @@ export default function BoardForm() {
 			valids.errMsg = "";
 		}
 		setTitleValid({ ...valids });
-		console.log(valids);
 	};
 	// create board
 	const submitHandler = async (e) => {

@@ -11,19 +11,19 @@ export default function Boards() {
 	const deleteBoard = async (slug) => {
 		try {
 			await axios.delete(`/boards/${slug}`);
-			await fetchTasks();
+			await fetchBoards();
 		} catch (error) {
 			console.log(error);
 		}
 	};
 
 	// TO FETCH BOARDS DATA FROM DB USING AXIOS API
-	const fetchTasks = async () => {
+	const fetchBoards = async () => {
 		const boards = await axios.get("/boards");
 		setBoards(boards.data.boards);
 	};
 	useEffect(() => {
-		fetchTasks();
+		fetchBoards();
 	}, []);
 
 	return (

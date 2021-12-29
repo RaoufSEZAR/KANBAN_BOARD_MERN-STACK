@@ -32,7 +32,7 @@ export default function Board() {
 
 		// to enable index left his place and drag drap it in the another column
 		if (source.droppableId !== destination.droppableId) {
-			// list name [todo,inPorgress.....]
+			// list name [Todo,inPorgress.....]
 			const sourceCol = cols[source.droppableId];
 			const destCol = cols[destination.droppableId];
 			// the items which have same list name
@@ -40,6 +40,7 @@ export default function Board() {
 			const destItems = [...destCol.items];
 			const [removed] = sourceItems.splice(source.index, 1);
 			destItems.splice(destination.index, 0, removed);
+
 			setCols({
 				...cols,
 				[source.droppableId]: {
