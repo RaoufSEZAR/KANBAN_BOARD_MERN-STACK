@@ -39,13 +39,12 @@ exports.getOneBoard = async (req, res, next) => {
 	try {
 		const board = await Board.findOne({ slug });
 		if (board) {
-			res.status(200).json({ status: "success", board });
-		} else {
-			res.status(500).json({
-				status: "failed",
-				data: `Board with slug: ${slug} is not found`,
-			});
+			return res.status(200).json({ status: "success", board });
 		}
+		res.status(500).json({
+			status: "failed",
+			data: `Board with slug: ${slug} is not found`,
+		});
 	} catch (error) {
 		res.status(500).json({ status: "failed", error });
 	}
@@ -60,12 +59,11 @@ exports.deleteBoard = async (req, res, next) => {
 			await Task.deleteMany({ boardId: board._id });
 			await Board.deleteOne({ slug });
 			return res.status(200).json({ status: "success" });
-		} else {
-			res.status(500).json({
-				status: "failed",
-				data: `board with slug: ${slug} is not found`,
-			});
 		}
+		res.status(500).json({
+			status: "failed",
+			data: `board with slug: ${slug} is not found`,
+		});
 	} catch (error) {
 		res.status(500).json({ status: "failed", error });
 	}
